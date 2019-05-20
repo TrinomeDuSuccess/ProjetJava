@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory ?>
+
+<AnchorPane prefHeight="752.0" prefWidth="1207.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RecapController">
+	<children>
+		<SplitPane dividerPositions="0.08113207547169811" orientation="VERTICAL" prefHeight="679.0" prefWidth="1207.0">
+			<items>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+					<children>
+						<Label layoutX="49.0" layoutY="1.0" prefHeight="38.0" prefWidth="307.0" text="Récapitulation de la simulation" />
+						<Label layoutX="987.0" layoutY="15.0" text="Efficacité :" />
+						<Label fx:id="efficacite" layoutX="1074.0" layoutY="17.0" text="Label" />
+					</children>
+				</AnchorPane>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="640.0" prefWidth="1198.0">
+					<children>
+						<Label layoutX="17.0" layoutY="12.0" prefHeight="15.0" prefWidth="217.0" text="Chaine de production OK :" />
+						<TableView fx:id="chaineOK" layoutX="19.0" layoutY="36.0" prefHeight="164.0" prefWidth="1167.0">
+							<columns>
+								<TableColumn prefWidth="85.0" text="Code">
+									<cellValueFactory>
+										<PropertyValueFactory property="code" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="333.0" text="Nom">
+									<cellValueFactory>
+										<PropertyValueFactory property="nom" />
+									</cellValueFactory>
+								</TableColumn>
+							</columns>
+						</TableView>
+						<Label layoutX="35.0" layoutY="227.0" text="Chaine de producton KO (pas de prix d'achat) :" />
+						<TableView fx:id="chaineKO" layoutX="29.0" layoutY="262.0" prefHeight="170.0" prefWidth="402.0">
+							<columns>
+								<TableColumn prefWidth="75.0" text="Code">
+									<cellValueFactory>
+										<PropertyValueFactory property="code" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="276.0" text="Nom">
+									<cellValueFactory>
+										<PropertyValueFactory property="nom" />
+									</cellValueFactory>
+								</TableColumn>
+							</columns>
+						</TableView>
+						<Label layoutX="466.0" layoutY="228.0" text="Liste d'achat :" />
+						<TableView fx:id="listeAchat" layoutX="468.0" layoutY="262.0" prefHeight="170.0" prefWidth="659.0">
+							<columns>
+								<TableColumn prefWidth="125.0" text="Code chaine">
+									<cellValueFactory>
+										<PropertyValueFactory property="codeChaine" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="141.0" text="Code élement">
+									<cellValueFactory>
+										<PropertyValueFactory property="code" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="139.0" text="Quantité">
+									<cellValueFactory>
+										<PropertyValueFactory property="quantite" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="127.0" text="Prix unitaire (€)">
+									<cellValueFactory>
+										<PropertyValueFactory property="prix" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="126.0" text="Total (€)">
+									<cellValueFactory>
+										<PropertyValueFactory property="total" />
+									</cellValueFactory>
+								</TableColumn>
+							</columns>
+						</TableView>
+						<Label layoutX="17.0" layoutY="448.0" text="Etat des stockages :" />
+						<TableView fx:id="stockage" layoutX="17.0" layoutY="475.0" prefHeight="130.0" prefWidth="1109.0">
+							<columns>
+								<TableColumn prefWidth="82.0" text="Code">
+									<cellValueFactory>
+										<PropertyValueFactory property="code" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="130.0" text="Nom">
+									<cellValueFactory>
+										<PropertyValueFactory property="nom" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="158.0" text="Capacité">
+									<cellValueFactory>
+										<PropertyValueFactory property="capacite" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="189.0" text="Quantité disponible">
+									<cellValueFactory>
+										<PropertyValueFactory property="quantiteDisponible" />
+									</cellValueFactory>
+								</TableColumn>
+							</columns>
+						</TableView>
+            		<Button layoutX="955.0" layoutY="222.0" mnemonicParsing="false" onAction="#handleExport" text="Exporter la liste d'achat" />
+					</children>
+				</AnchorPane>
+			</items>
+		</SplitPane>
+		<Button layoutX="505.0" layoutY="700.0" mnemonicParsing="false" onAction="#handleMenuSimulationView" prefHeight="25.0" prefWidth="154.0" text="Retour" />
+		<Button layoutX="26.0" layoutY="695.0" mnemonicParsing="false" onAction="#handleAccesDemandeView" text="Accéder aux pourcentages de demande" />
+	</children>
+</AnchorPane>

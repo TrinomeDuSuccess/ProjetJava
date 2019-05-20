@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory ?>
+
+<AnchorPane prefHeight="298.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListeElementDemandeController">
+	<children>
+		<SplitPane dividerPositions="0.22635135135135134" orientation="VERTICAL" prefHeight="354.0" prefWidth="1200.0" AnchorPane.bottomAnchor="-56.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<items>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+					<children>
+						<Label layoutX="39.0" layoutY="26.0" text="Etat des stock après simulation :" />
+					</children>
+				</AnchorPane>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="305.0" prefWidth="1198.0">
+					<children>
+						<TableView fx:id="listeElementDemande" layoutY="23.0" prefHeight="268.0" prefWidth="1198.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<columns>
+								<TableColumn prefWidth="75.0" text="Code">
+									<cellValueFactory>
+										<PropertyValueFactory property="code" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="217.0" text="Nom">
+									<cellValueFactory>
+										<PropertyValueFactory property="nom" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="79.0" text="Quantité">
+									<cellValueFactory>
+										<PropertyValueFactory property="quantite" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn minWidth="0.0" text="Unité">
+									<cellValueFactory>
+										<PropertyValueFactory property="unite" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn minWidth="0.0" prefWidth="85.0" text="Achat">
+									<cellValueFactory>
+										<PropertyValueFactory property="achat" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn minWidth="0.0" prefWidth="102.0" text="Vente">
+									<cellValueFactory>
+										<PropertyValueFactory property="vente" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="116.0" text="Stockage">
+									<cellValueFactory>
+										<PropertyValueFactory property="stockage" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="142.0" text="Demande">
+									<cellValueFactory>
+										<PropertyValueFactory property="demande" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn prefWidth="149.0" text="Statisfaction (%)">
+									<cellValueFactory>
+										<PropertyValueFactory property="percent" />
+									</cellValueFactory>
+								</TableColumn>
+							</columns>
+						</TableView>
+					</children>
+				</AnchorPane>
+			</items>
+		</SplitPane>
+	</children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="492.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccueilController">
+   <children>
+      <Label layoutX="350.0" layoutY="12.0" prefHeight="64.0" prefWidth="309.0" text="Menu principal" textAlignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Button id="idMarchandises" layoutX="411.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleElementView" text="Marchandises" />
+      <Button id="idSimulation" layoutX="414.0" layoutY="169.0" mnemonicParsing="false" onAction="#handleSimulationView" prefHeight="25.0" prefWidth="106.0" text="Simulation" />
+      <Button id="idParams" layoutX="413.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Paramètres" />
+   </children>
+</AnchorPane>
